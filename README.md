@@ -1,3 +1,6 @@
+# ML Assignment 2 – Cybersecurity Intrusion Detection
+
+## Student Details
 Student Name: Kushal R
 BITS ID: 2025AA05518
 Course: M.Tech AIML
@@ -45,3 +48,4 @@ Accuracy, AUC Score, Precision, Recall, F1 Score, MCC.
 - Predictions display
 - Confusion matrix
 - Classification report
+
