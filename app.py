@@ -58,7 +58,7 @@ if uploaded_file is not None:
 
 else:
     try:
-        df = pd.read_csv("sample_test.csv", header=None)
+        df = pd.read_csv("sample_test.csv")
         st.info("Using default sample dataset from repository")
 
     except:
