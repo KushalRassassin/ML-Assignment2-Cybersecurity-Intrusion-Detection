@@ -46,11 +46,25 @@ except Exception as e:
     st.error(f"Models not found: {e}")
     st.stop()
 
-# Upload dataset
-uploaded_file = st.file_uploader("Upload CSV dataset", type=["csv"])
+st.subheader("Dataset Input")
+uploaded_file = st.file_uploader(
+    "Upload CSV dataset (optional)",
+    type=["csv"]
+)
 
-if uploaded_file:
+if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
+    st.success("Using uploaded dataset")
+
+else:
+    try:
+        df = pd.read_csv("sample_test.csv", header=None)
+        st.info("Using default sample dataset from repository")
+
+    except:
+        st.warning("No dataset available. Please upload CSV file.")
+        st.stop()
+
 
     st.divider()
     st.subheader("Dataset Preview")
